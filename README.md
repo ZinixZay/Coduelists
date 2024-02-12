@@ -1,4 +1,4 @@
-# Tycoon
+# Coduelists
 
 ## Наша команда
 
