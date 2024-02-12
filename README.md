@@ -30,7 +30,7 @@
 
 ## Диаграммы вариантов использования:
 
-![Alt text](img/usecase.png)
+![Alt text](img/usecasediagram.png)
 
 Источник: https://drive.google.com/file/d/1m8xbO5F63d_SYwYb3J5pwmLKoa3dfRzW/view
 
