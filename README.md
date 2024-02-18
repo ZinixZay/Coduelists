@@ -34,6 +34,12 @@
 
 Источник: https://drive.google.com/file/d/1m8xbO5F63d_SYwYb3J5pwmLKoa3dfRzW/view
 
+## Диаграммы бизнес процессов
+
+![Alt text](img/businessdiagram.png)
+
+Источник: https://drive.google.com/file/d/1zhpiWUTrlhhsmi75ZiMnB_fpCJlJtU9J/view
+
 # 3. Используемые ресурсы
 
 Макет: https://pixso.net/app/editor/9SNHoKLOuor0Dc9HEo2RGA?icon_type=1&page-id=53%3A56
