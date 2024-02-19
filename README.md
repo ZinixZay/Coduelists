@@ -61,7 +61,7 @@
 
 ### Диаграммы бизнес процессов
 
-![businessDiagram](img/businessdiagram.png)
+![businessDiagram](img/n_diag.png)
 
 Источник: [Google Drive](https://drive.google.com/file/d/1zhpiWUTrlhhsmi75ZiMnB_fpCJlJtU9J/view)
 
