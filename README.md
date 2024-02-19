@@ -23,7 +23,7 @@
 - [Используемые ресурсы](#используемые-ресурсы)
 
 # Введение
-
+https://docs.google.com/presentation/d/1pXB0mhXi-XLHVg-oehW9r_xZoJP940QQ5TwNDNyBrA8/edit#slide=id.p
 ### Цель проекта
 
 Создание платформы для учителей, учеников и студентов-программистов.
