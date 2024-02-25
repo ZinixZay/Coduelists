@@ -1,4 +1,4 @@
-фы# Coduelists
+# Coduelists
 
 # Состав команды
 
