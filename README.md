@@ -1,6 +1,10 @@
 https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ5Ho/edit#slide=id.g2bf117ea868_0_55
 # Coduelists
 
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/a0fadf02-8a31-4ed1-8ed4-364e08b7da73)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/f7c9a6a6-6930-4389-9e4e-bc3dae2b93ec)
+
+
 # Состав команды
 
 **Рыжик Даниил**, **Цыганов Владислав**, **Кочиев Сергей**, **Черных Егор**, **Киселёв Артём**, **Белов Степан**, **Канашин Дмитрий**
