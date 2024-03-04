@@ -5,6 +5,7 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 
 **Рыжик Даниил**, **Цыганов Владислав**, **Кочиев Сергей**, **Черных Егор**, **Киселёв Артём**, **Белов Степан**, **Канашин Дмитрий**
 
+https://docs.google.com/document/d/1nVzwNSHt3sEEeKZBS-1oaHO-U4kR7OTNEwW778UnxRQ/edit
 # Содержание
 - [Введение](#введение)
     - [О проекте](#о-проекте)
