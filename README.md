@@ -238,6 +238,8 @@ https://docs.google.com/document/d/1nVzwNSHt3sEEeKZBS-1oaHO-U4kR7OTNEwW778UnxRQ/
 		    - 11.5.1.3 Технические неполадки
 
 # Структура данных
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/6cc6e270-6149-4c76-8c02-1b1a6d69d198)
+
 - Задание:
 	- Название (строка, макс длина - 127)
 	- Создатель (ключ, таблица Пользователь)
