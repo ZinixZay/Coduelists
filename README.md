@@ -373,6 +373,8 @@
 
 # План поэтапной разработки и расширения системы
 
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/9f430a43-f5a2-45cb-9e81-d33c521380ca)
+
 # Требования атрибутов качества
 
 Расчеты: https://docs.google.com/spreadsheets/d/1OC01LuxJhkQQbdhQ3buEsQfqHbKTSJatgI-zn54gOqQ/edit?usp=sharing
