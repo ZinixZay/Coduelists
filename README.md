@@ -279,7 +279,8 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 
 # Структура данных
 
-![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/6cc6e270-6149-4c76-8c02-1b1a6d69d198)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/97afccc6-4f9f-4a47-bbae-1782c14d7f82)
+
 
 - Задание:
 	- Название (строка, макс длина - 127)
