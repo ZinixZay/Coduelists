@@ -379,7 +379,8 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 
 # План поэтапной разработки и расширения системы
 
-![roadmap](https://github.com/ZinixZay/Coduelists/assets/67552741/9f430a43-f5a2-45cb-9e81-d33c521380ca)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/5ec1cf41-8d4c-4372-92f0-88dc1cfd3626)
+
 
 # Макет
 
