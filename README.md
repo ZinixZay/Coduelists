@@ -381,6 +381,12 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 
 ![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/9f430a43-f5a2-45cb-9e81-d33c521380ca)
 
+# Макет
+
+https://www.figma.com/file/e5DF4glQ8WyW4nWMnzhKiP/task2?type=design&node-id=32%3A453&mode=design&t=vkEFYCV6oL5G4o3s-1
+
+https://www.figma.com/file/7K3Mg8BbqEdsu5FcMKNHa6/task?type=design&node-id=1%3A26&mode=design&t=O26I3WKh4HYC3T53-1
+
 # Требования атрибутов качества
 
 Стандарт ISO 9126-4
