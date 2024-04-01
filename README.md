@@ -279,7 +279,7 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 
 # Структура данных
 
-![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/97afccc6-4f9f-4a47-bbae-1782c14d7f82)
+![datastructure](https://github.com/ZinixZay/Coduelists/assets/67552741/97afccc6-4f9f-4a47-bbae-1782c14d7f82)
 
 
 - Задание:
@@ -379,7 +379,7 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 
 # План поэтапной разработки и расширения системы
 
-![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/9f430a43-f5a2-45cb-9e81-d33c521380ca)
+![roadmap](https://github.com/ZinixZay/Coduelists/assets/67552741/9f430a43-f5a2-45cb-9e81-d33c521380ca)
 
 # Требования атрибутов качества
 
