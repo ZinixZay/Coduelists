@@ -279,7 +279,8 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 
 # Структура данных
 
-![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/27067116-3b2b-431d-a688-605d57a3c15f)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/3681d7d1-7f93-404c-a690-eb1a47174e9f)
+
 
 
 
