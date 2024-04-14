@@ -278,8 +278,8 @@ https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ
 		    - 11.5.1.3 Технические неполадки
 
 # Структура данных
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/3b4bd8ad-41e3-4b33-b3cd-7b76317c57fa)
 
-![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/3681d7d1-7f93-404c-a690-eb1a47174e9f)
 
 
 
