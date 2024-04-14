@@ -470,6 +470,17 @@ https://www.figma.com/file/7K3Mg8BbqEdsu5FcMKNHa6/task?type=design&node-id=1%3A2
 
 #### Перед началом разработки будет проведено тщательное проектирование. Необходимо детально продумать архитектуру каждого слоя и компонента. Это поможет избежать проблем с производительностью, зависимостями и другими аспектами разработки. Существует множество инструментов и библиотек, которые могут упростить разработку и управление многослойной архитектурой.
 
+# BackEnd Разработка
+
+Физическая модель данных
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/c1218373-8bdf-4da4-bb53-aaa30b41c5be)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/d0863303-1e22-4685-8705-c177583cecc9)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/2c171424-9b1c-48f5-a472-9269c13946e0)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/7e45f901-e2a5-4df6-b125-05bcf6a795fc)
+
+Админ панель
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/abb2eec0-9bb8-4285-b4fb-ffa31af37738)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/3c04cafc-6f98-4321-8dab-45cc4776e336)
 
 
 # Используемые ресурсы
