@@ -1,6 +1,6 @@
 # Coduelists
 
-# 5 Итерация
+# 6 Итерация
 https://docs.google.com/presentation/d/1HvGnNoPaQ3qJMIiVB8_l-6tvqpsS8MhXZ_Y9PFRQ5Ho/edit#slide=id.g2bf117ea868_0_75
 
 # Состав команды
