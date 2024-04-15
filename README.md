@@ -482,6 +482,9 @@ https://www.figma.com/file/7K3Mg8BbqEdsu5FcMKNHa6/task?type=design&node-id=1%3A2
 ![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/abb2eec0-9bb8-4285-b4fb-ffa31af37738)
 ![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/3c04cafc-6f98-4321-8dab-45cc4776e336)
 
+# Дизайн
+
+Демо сайта https://sergeykochiev.github.io/tasknew/
 
 # Используемые ресурсы
 
