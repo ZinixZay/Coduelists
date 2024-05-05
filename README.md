@@ -484,7 +484,7 @@ https://www.figma.com/file/7K3Mg8BbqEdsu5FcMKNHa6/task?type=design&node-id=1%3A2
 
 # Дизайн
 
-Демо сайта https://sergeykochiev.github.io/tasknew/
+Демо сайта https://tasknew-blush.vercel.app/
 
 # Используемые ресурсы
 
