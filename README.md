@@ -417,7 +417,11 @@ Frontend-часть будет построена с помощью многос
 
 # Структура данных
 
-![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/d2308688-43f0-4741-bfcd-c7a51968026b)
+![изображение](https://github.com/ZinixZay/Coduelists/assets/67552741/8960d6a3-dfeb-4180-b772-032a17e9a4da)
+
+# Структура API
+
+
 
 # Автоматизируемые процессы
 
