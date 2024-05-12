@@ -1,0 +1,1081 @@
+openapi: 3.0.3
+info:
+  title: Coduelists OpenAPI Спецификация
+  version: 0.0.1
+servers:
+  - url: http://localhost:8000/api/v1
+    description: Dev server
+paths:
+  /auth/register:
+    post:
+      summary: Регистрация аккаунта
+      tags:
+        - authorization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        '200': 
+          description: Успешная регистрация аккаунта
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+  /auth/login:
+    post:
+      summary: Вход в аккаунт
+      tags:
+        - authorization
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        '200': 
+          description: Успешная вход в аккаунт
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+  /search/channels/{channel_label}:
+    get:
+      summary: Поиск каналов
+      tags:
+        - tasks
+      parameters:
+        - name: channel_label
+          in: path
+          required: true
+          description: название канала
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Успешный ответ со списком каналов
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Channels"
+  /search/tasks/{task_label}:
+    get:
+      summary: Поиск заданий
+      tags:
+        - tasks
+      parameters:
+        - name: task_label
+          in: path
+          required: true
+          description: название задания
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Успешный ответ со списком заданий
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tasks"
+  /channels:
+    get:
+      summary: Получение каналов
+      tags:
+        - tasks
+      responses:
+        '200':
+          description: Успешный ответ со списком каналов
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Channels"
+    post:
+      summary: Добавление канала
+      tags:
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Channel"
+      responses:
+        '200':
+          description: Успешный ответ с созданным каналом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Channel"
+  /channels/{channel_id}:
+    get:
+      summary: Получение канала
+      tags:
+        - tasks
+      parameters:
+        - name: channel_id
+          in: path
+          required: true
+          description: ай ди канала
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с информацией о канале
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Channel"
+    delete:
+      summary: Удаление канала
+      tags:
+        - tasks
+      parameters:
+        - name: channel_id
+          in: path
+          required: true
+          description: ай ди канала
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с удаленным канала
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Channel"
+    patch:
+      summary: Обновление канала
+      tags: 
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Channel"
+      parameters:
+        - name: channel_id
+          in: path
+          required: true
+          description: ай ди канала
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с обновленным каналом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Channel"
+  /subscribe:
+    get:
+      summary: Получение подписчиков
+      tags:
+        - tasks
+      responses:
+        '200':
+          description: Успешный ответ со списком подписчиков
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Subscribes"
+    post:
+      summary: Подписка на бесплатный канал/пользователя
+      tags:
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Subscribe"
+      responses:
+        '200':
+          description: Успешный ответ с поданой заявкой
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Subscribe"
+  /subscribeRequest:
+    get:
+      summary: Получение заявок на подписку
+      tags:
+        - tasks
+      responses:
+        '200':
+          description: Успешный ответ со списком заявок на подписку
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SubscribeRequests"
+    post:
+      summary: Подача заявки на подписку
+      tags:
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SubscribeRequest"
+      responses:
+        '200':
+          description: Успешный ответ с поданой заявкой
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SubscribeRequest"
+  /subscribeRequest/{subscribeRequest_id}:
+    get:
+      summary: Получение заявки
+      tags:
+        - tasks
+      parameters:
+        - name: subscribeRequest_id
+          in: path
+          required: true
+          description: ай ди заявки
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с информацией о заявке
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SubscribeRequest"
+  /subscribeRequest/{subscribeRequest_id}/{accept}:
+    delete:
+      summary: Удаление заявки
+      tags:
+        - tasks
+      parameters:
+        - name: subscribeRequest_id
+          in: path
+          required: true
+          description: ай ди заявки
+          schema:
+            type: number
+        - name: accept
+          in: path
+          required: true
+          description: принять
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Успешный ответ с удаленным заданием
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SubscribeRequest"
+  /tasks:
+    get:
+      summary: Получение заданий
+      tags:
+        - tasks
+      responses:
+        '200':
+          description: Успешный ответ со списком заданий
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tasks"
+    post:
+      summary: Добавление задания
+      tags:
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Task"
+      responses:
+        '200':
+          description: Успешный ответ с созданным заданием
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+  /tasks/{task_id}:
+    get:
+      summary: Получение задания
+      tags:
+        - tasks
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          description: ай ди задания
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с информацией о задании
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+    delete:
+      summary: Удаление задания
+      tags:
+        - tasks
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          description: ай ди задания
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с удаленным заданием
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+    patch:
+      summary: Обновление задания
+      tags: 
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Task"
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          description: ай ди задания
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с обновленным заданием
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+  /statistics/{task_id}:
+    get:
+      summary: Получение статистики по заданию
+      tags:
+        - tasks
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          description: ай ди задания
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ со статистикой задания
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Answers"
+  /questions:
+    get:
+      summary: Получение вопросов задания
+      tags:
+        - tasks
+      responses:
+        '200':
+          description: Успешный ответ со списком вопросов
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Questions"
+    post:
+      summary: Добавление вопроса
+      tags:
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Question"
+      responses:
+        '200':
+          description: Успешный ответ с добавленным заданием
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Question"
+  /questions/{question_id}:
+    get:
+      summary: Получение вопроса
+      tags:
+        - tasks
+      parameters:
+        - name: question_id
+          in: path
+          required: true
+          description: ай ди вопроса
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с информацией о вопросе
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Question"
+    delete:
+      summary: Удаление вопроса
+      tags:
+        - tasks
+      parameters:
+        - name: question_id
+          in: path
+          required: true
+          description: ай ди вопроса
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с удаленным вопросом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Question"
+    patch:
+      summary: Обновление вопроса
+      tags: 
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Question"
+      parameters:
+        - name: question_id
+          in: path
+          required: true
+          description: ай ди вопроса
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с обновленным вопросом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Question"
+  /variants:
+    get:
+      summary: Получение вариантов ответа на вопрос
+      tags:
+        - tasks
+      responses:
+        '200':
+          description: Успешный ответ со списком вопросов
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Variants"
+    post:
+      summary: Добавление варианта ответа
+      tags:
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Variant"
+      responses:
+        '200':
+          description: Успешный ответ с созданным вариантом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Variant"
+  /variants/{variant_id}:
+    get:
+      summary: Получение варианта ответа
+      tags:
+        - tasks
+      parameters:
+        - name: variant_id
+          in: path
+          required: true
+          description: ай ди варианта ответа
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с вариантом ответа
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Variant"
+    delete:
+      summary: Удаление варианта ответа
+      tags:
+        - tasks
+      parameters:
+        - name: variant_id
+          in: path
+          required: true
+          description: ай ди варианта ответа
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с удаленным вариантом ответа
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Variant"
+    patch:
+      summary: Обновление варианта ответа
+      tags: 
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Variant"
+      parameters:
+        - name: variant_id
+          in: path
+          required: true
+          description: ай ди варианта ответа
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с обновленным вариантом ответа
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Variant"
+  /answers:
+    get:
+      summary: Получение ответов на варианты ответа на вопрос
+      tags:
+        - tasks
+      responses:
+        '200':
+          description: Успешный ответ со списком ответов
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Answers"
+    post:
+      summary: Добавление ответа
+      tags:
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Answer"
+      responses:
+        '200':
+          description: Успешный ответ с созданным ответом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Answer"
+  /answers/{answer_id}:
+    get:
+      summary: Получение ответа
+      tags:
+        - tasks
+      parameters:
+        - name: answer_id
+          in: path
+          required: true
+          description: ай ди ответа
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с ответом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Answer"
+    delete:
+      summary: Удаление ответа
+      tags:
+        - tasks
+      parameters:
+        - name: answer_id
+          in: path
+          required: true
+          description: ай ди ответа
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с удаленным ответом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Answer"
+    patch:
+      summary: Обновление ответа
+      tags: 
+        - tasks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Answer"
+      parameters:
+        - name: answer_id
+          in: path
+          required: true
+          description: ай ди ответа
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с обновленным ответом
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Answer"
+  /payment/status/{status_id}:
+    get:
+      summary: Покупка тарифа
+      tags:
+        - payment
+      parameters:
+        - name: status_id
+          in: path
+          required: true
+          description: ай ди покупаемого тарифа
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с ссылкой на оплату
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  url:
+                    type: string
+  /payment/channel/{channel_id}:
+    get:
+      summary: Покупка подписки на канал
+      tags:
+        - payment
+      parameters:
+        - name: channel_id
+          in: path
+          required: true
+          description: ай ди канала
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с ссылкой на оплату
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  url:
+                    type: string
+  /profiles:
+    get:
+      summary: Получение информации о профилях
+      tags:
+        - profiles
+      responses:
+        '200':
+          description: Успешный ответ с профилями пользователей
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profiles"
+  /profiles/{profile_id}:
+    get:
+      summary: Получение информации о профиле
+      tags:
+        - profiles
+      parameters:
+        - name: profile_id
+          in: path
+          required: true
+          description: ай ди профиля
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с информацией о профиле
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profile"
+    delete:
+      summary: Удаление пользователя
+      tags:
+        - profiles
+      parameters:
+        - name: profile_id
+          in: path
+          required: true
+          description: ай ди профиля
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с удаленным профилем
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profile"
+    patch:
+      summary: Обновление профиля
+      tags: 
+        - profiles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Profile"
+      parameters:
+        - name: profile_id
+          in: path
+          required: true
+          description: ай ди профиля
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Успешный ответ с обновленным профилем
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profile"
+  /search/profiles/{profile_name}:
+    get:
+      summary: Поиск профилей
+      tags:
+        - profiles
+      parameters:
+        - name: profile_name
+          in: path
+          required: true
+          description: имя или фамилия профиля
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Успешный ответ со списком профилей
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Profiles"
+  
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - nickname
+        - email
+        - password
+      properties:
+        userId:
+          type: number
+          example: 1
+        nickname:
+          type: string
+          example: zinix
+          description: отображаемое имя пользователя
+        email:
+          type: string
+          example: test@test.ru
+          description: связанная почта
+        password:
+          type: string
+          example: 9c217900395aab5430f3105abc929ecd
+          description: хешированный пароль
+        is_staff:
+          type: boolean
+          example: false
+        is_active:
+          type: boolean
+          example: true
+    Users:
+      type: array
+      items:
+        $ref: "#/components/schemas/User"
+    Profile:
+      type: object
+      required: 
+        - status_visible
+        - creation_date
+        - statusId
+      properties:
+        profileId:
+          type: number
+          example: 1
+        first_name:
+          type: string
+          example: Даниил
+        last_name:
+          type: string
+          example: Рыжик
+        avatar:
+          type: string
+          format: binary
+        status_visible:
+          type: boolean
+          example: true
+          description: видна ли пользователям общая информация профиля
+        creation_date: 
+          type: string
+          format: 2022-07-01T15:00:00+01
+        statusId:
+          type: number
+          example: 1
+    Profiles:
+      type: array
+      items: 
+        $ref: "#/components/schemas/Profile"
+    ProfileStatus:
+      type: object
+      required:
+        - statusId
+        - label
+      properties:
+        statusId:
+          type: number
+          example: 1
+        label:
+          type: string
+          example: Ученик
+    Channel:
+      type: object
+      required:
+        - label
+        - price
+      properties:
+        channelId:
+          type: number
+          example: 1
+        creatorId:
+          type: number
+          example: 1
+          description: ай ди создателя из таблицы Users
+        label:
+          type: string
+          example: Курс по подготовке к ЕГЭ
+          description: название канала
+        description: 
+          type: string
+          example: тут собраны тесты из пробников этого года
+          description: описание канала
+        price:
+          type: number
+          example: 250
+          description: стоимость подписки
+        slug:
+          type: string
+          example: kurs_po_podgotovke_k_ege
+    Channels:
+      type: array
+      items:
+        $ref: "#/components/schemas/Channel"
+    Subscribe:
+      type: object
+      required:
+        - subscribeId
+        - target_type
+        - subscriber
+        - target
+      properties:
+        subscribeId:
+          type: number
+          example: 1
+        target_type:
+          type: string
+          enum:
+            - channel
+            - user
+          description: подписка на канал или на пользователя
+        subscriber:
+          type: number
+          example: 1
+          description: подписавшийся пользователь
+        target: 
+          type: number
+          example: 1
+          description: ай ди пользователя или канала, на который подписались
+    Subscribes:
+      type: array
+      items:
+        $ref: "#/components/schemas/Subscribe"
+    Task:
+      type: object
+      required:
+        - title
+        - brief_description
+        - visibility
+        - is_feedback
+        - attempts
+      properties:
+        taskId:
+          type: number
+          example: 1
+        title:
+          type: string
+          example: подготовка к ЕГЭ
+          description: название
+        brief_description:
+          type: string
+          example: Пробный вариант
+          description: краткое описание
+        detailed_description:
+          type: string
+          example: Пробный вариант по ЕГЭ
+          description: полное описание
+        visibility:
+          type: string
+          enum:
+            - public
+            - private
+            - channel_public
+            - channel_private
+          example: public
+          description: тип видимости
+        creatorId:
+          type: number
+          example: 1
+          description: создатель
+        channelId:
+          type: number
+          example: 1
+          description: канал, которому принадлежит
+        date_created:
+          type: string
+          format: 2022-07-01T15:00:00+01
+        slug:
+          type: string
+          example: podgotovka_k_ege
+        identifier:
+          type: number
+          example: 15555
+          description: уникальный идентификатор доступа
+        is_feedback:
+          type: boolean
+          example: true
+          description: отображение результатов ученику
+        attempts:
+          type: number
+          example: 3
+          description: количество попыток для прохождения
+        upload:
+          type: string
+          format: binary
+          description: архив с дополнительными файлами
+    Tasks:
+      type: array
+      items:
+        $ref: "#/components/schemas/Task"
+    Question:
+      type: object
+      required:
+        - taskId
+        - label
+      properties: 
+        questionId:
+          type: number
+          example: 1
+        taskId:
+          type: number
+          example: 1
+        label:
+          type: string
+          example: Сколько 5+5?
+    Questions:
+      type: array
+      items:
+        $ref: "#/components/schemas/Question"
+    Variant:
+      type: object
+      required:
+        - questionId
+        - label
+      properties:
+        variantId:
+          type: number
+          example: 1
+        questionId:
+          type: number
+          example: 1
+        label:
+          type: string
+          example: 15
+        correct:
+          type: boolean
+          example: false
+    Variants:
+      type: array
+      items:
+        $ref: "#/components/schemas/Variant"
+    Answer:
+      type: object
+      required: 
+        - variantId
+      properties:
+        answerId:
+          type: number
+          example: 1
+        variantId:
+          type: number
+          example: 1
+        userId:
+          type: number
+          example: 1
+        label:
+          type: string
+          example: автоматон
+    Answers:
+      type: array
+      items:
+        $ref: "#/components/schemas/Answer"
+    SubscribeRequest:
+      type: object
+      required:
+        - channelId
+      properties:
+        subscribeRequestId: 
+          type: number
+          example: 1
+        userId:
+          type: number
+          example: 1
+        targetId:
+          type: number
+          example: 1
+    SubscribeRequests:
+      type: array
+      items:
+        $ref: "#/components/schemas/SubscribeRequest"
