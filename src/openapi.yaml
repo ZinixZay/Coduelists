@@ -305,6 +305,26 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Task"
+        '400':
+          description: Неверные данные
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response: 
+                    type: string
+                    example: "wrong data"
+        '401':
+          description: Отсутвтует корректный JWT Token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response: 
+                    type: string
+                    example: "unauthorized"
   /tasks/{task_id}:
     get:
       summary: Получение задания
