@@ -325,6 +325,16 @@ paths:
                   response: 
                     type: string
                     example: "unauthorized"
+        '500':
+          description: Ошибка на сервере
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response: 
+                    type: string
+                    example: "server does not response"
   /tasks/{task_id}:
     get:
       summary: Получение задания
