@@ -50,7 +50,7 @@ paths:
     get:
       summary: Поиск каналов
       tags:
-        - tasks
+        - channels
       parameters:
         - name: channel_label
           in: path
@@ -88,7 +88,7 @@ paths:
     get:
       summary: Получение каналов
       tags:
-        - tasks
+        - channels
       responses:
         '200':
           description: Успешный ответ со списком каналов
@@ -99,7 +99,7 @@ paths:
     post:
       summary: Добавление канала
       tags:
-        - tasks
+        - channels
       requestBody:
         required: true
         content:
@@ -117,7 +117,7 @@ paths:
     get:
       summary: Получение канала
       tags:
-        - tasks
+        - channels
       parameters:
         - name: channel_id
           in: path
@@ -135,7 +135,7 @@ paths:
     delete:
       summary: Удаление канала
       tags:
-        - tasks
+        - channels
       parameters:
         - name: channel_id
           in: path
@@ -153,7 +153,7 @@ paths:
     patch:
       summary: Обновление канала
       tags: 
-        - tasks
+        - channels
       requestBody:
         required: true
         content:
@@ -178,7 +178,7 @@ paths:
     get:
       summary: Получение подписчиков
       tags:
-        - tasks
+        - subscribes
       responses:
         '200':
           description: Успешный ответ со списком подписчиков
@@ -189,7 +189,7 @@ paths:
     post:
       summary: Подписка на бесплатный канал/пользователя
       tags:
-        - tasks
+        - subscribes
       requestBody:
         required: true
         content:
@@ -207,7 +207,7 @@ paths:
     get:
       summary: Получение заявок на подписку
       tags:
-        - tasks
+        - subscribes
       responses:
         '200':
           description: Успешный ответ со списком заявок на подписку
@@ -218,7 +218,7 @@ paths:
     post:
       summary: Подача заявки на подписку
       tags:
-        - tasks
+        - subscribes
       requestBody:
         required: true
         content:
@@ -236,7 +236,7 @@ paths:
     get:
       summary: Получение заявки
       tags:
-        - tasks
+        - subscribes
       parameters:
         - name: subscribeRequest_id
           in: path
@@ -255,7 +255,7 @@ paths:
     delete:
       summary: Удаление заявки
       tags:
-        - tasks
+        - subscribes
       parameters:
         - name: subscribeRequest_id
           in: path
@@ -389,7 +389,7 @@ paths:
     get:
       summary: Получение вопросов задания
       tags:
-        - tasks
+        - questions
       responses:
         '200':
           description: Успешный ответ со списком вопросов
@@ -400,7 +400,7 @@ paths:
     post:
       summary: Добавление вопроса
       tags:
-        - tasks
+        - questions
       requestBody:
         required: true
         content:
@@ -418,7 +418,7 @@ paths:
     get:
       summary: Получение вопроса
       tags:
-        - tasks
+        - questions
       parameters:
         - name: question_id
           in: path
@@ -436,7 +436,7 @@ paths:
     delete:
       summary: Удаление вопроса
       tags:
-        - tasks
+        - questions
       parameters:
         - name: question_id
           in: path
@@ -454,7 +454,7 @@ paths:
     patch:
       summary: Обновление вопроса
       tags: 
-        - tasks
+        - questions
       requestBody:
         required: true
         content:
@@ -479,7 +479,7 @@ paths:
     get:
       summary: Получение вариантов ответа на вопрос
       tags:
-        - tasks
+        - variants
       responses:
         '200':
           description: Успешный ответ со списком вопросов
@@ -490,7 +490,7 @@ paths:
     post:
       summary: Добавление варианта ответа
       tags:
-        - tasks
+        - variants
       requestBody:
         required: true
         content:
@@ -508,7 +508,7 @@ paths:
     get:
       summary: Получение варианта ответа
       tags:
-        - tasks
+        - variants
       parameters:
         - name: variant_id
           in: path
@@ -526,7 +526,7 @@ paths:
     delete:
       summary: Удаление варианта ответа
       tags:
-        - tasks
+        - variants
       parameters:
         - name: variant_id
           in: path
@@ -544,7 +544,7 @@ paths:
     patch:
       summary: Обновление варианта ответа
       tags: 
-        - tasks
+        - variants
       requestBody:
         required: true
         content:
@@ -569,7 +569,7 @@ paths:
     get:
       summary: Получение ответов на варианты ответа на вопрос
       tags:
-        - tasks
+        - answers
       responses:
         '200':
           description: Успешный ответ со списком ответов
@@ -580,7 +580,7 @@ paths:
     post:
       summary: Добавление ответа
       tags:
-        - tasks
+        - answers
       requestBody:
         required: true
         content:
@@ -598,7 +598,7 @@ paths:
     get:
       summary: Получение ответа
       tags:
-        - tasks
+        - answers
       parameters:
         - name: answer_id
           in: path
@@ -616,7 +616,7 @@ paths:
     delete:
       summary: Удаление ответа
       tags:
-        - tasks
+        - answers
       parameters:
         - name: answer_id
           in: path
@@ -634,7 +634,7 @@ paths:
     patch:
       summary: Обновление ответа
       tags: 
-        - tasks
+        - answers
       requestBody:
         required: true
         content:
